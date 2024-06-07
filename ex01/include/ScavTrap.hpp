@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:26:56 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 17:46:56 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 18:09:31 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class ScavTrap : public ClapTrap
 		ScavTrap( const ScavTrap& copy );
 		ScavTrap& operator=( const ScavTrap& copy );
 		~ScavTrap( void );
+
+		void guardGate();
+		
 };
 
 #endif

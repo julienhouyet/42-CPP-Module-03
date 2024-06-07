@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:40:46 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 17:36:36 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 18:10:42 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,14 @@ int main()
 	std::cout << std::endl;
 	
 	lucas.attack("Charlie");
+
+	std::cout << std::endl;
+
+	lucas.guardGate();
+
+	std::cout << std::endl;
+	
+	charlie.guardGate();
 
 	std::cout << std::endl;
 }

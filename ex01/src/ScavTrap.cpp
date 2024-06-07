@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:26:44 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 18:02:11 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 18:12:53 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,9 @@ ScavTrap& ScavTrap::operator=( const ScavTrap& copy )
 ScavTrap::~ScavTrap( void )
 {
 	std::cout << "Destructor called" << std::endl;
+}
+
+void ScavTrap::guardGate()
+{
+	std::cout << "ScavTrap " << getName() << " is now in Gate keeper mode." << std::endl;
 }
