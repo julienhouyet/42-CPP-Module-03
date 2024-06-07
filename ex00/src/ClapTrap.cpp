@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:40:40 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 15:57:00 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 16:35:33 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,25 @@ ClapTrap::~ClapTrap( void )
 	std::cout << "Destructor called" << std::endl;
 }
 
-void ClapTrap::attack( const std::string& target ) {}
+void ClapTrap::attack( const std::string& target )
+{
+	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+}
 
-void ClapTrap::takeDamage( unsigned int amount ) {}
+void ClapTrap::takeDamage( unsigned int amount )
+{
+	if (this->_hitPoints > 0)
+	{
+		this->_hitPoints = this->_hitPoints - amount;
+		std::cout << this->_name << " take " << amount << " points of damage, " << this->_hitPoints << " hit points remaining." << std::endl;
+	}
+	else
+	{
+		std::cout << this->_name << " can't take " << amount << " damage points, he's already dead!" << std::endl;
+	}
+}
 
-void ClapTrap::beRepaired( unsigned int amount ) {}
+void ClapTrap::beRepaired( unsigned int amount )
+{
+	std::cout << "repair " << amount << " hitpoint " << std::endl;
+}

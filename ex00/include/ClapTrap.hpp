@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:40:34 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 15:42:43 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 16:29:14 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class ClapTrap
 
 	private:
 		std::string _name;
-		int _hitPoints;
+		unsigned int _hitPoints;
 		int _energyPoint;
 		int _attackDamage;
 };

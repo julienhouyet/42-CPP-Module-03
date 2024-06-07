@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:40:46 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 13:43:07 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 16:33:42 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,15 @@
 
 int main()
 {
-	std::cout << "Hello ClapTrap" << std::endl;
+	ClapTrap lucas("Lucas");
+	ClapTrap victor("Victor");
+	ClapTrap charlie("Charlie");
+
+	lucas.attack("Charlie");
+	charlie.takeDamage(20);
+	charlie.takeDamage(20);
+	charlie.takeDamage(20);
+	charlie.takeDamage(20);
+	charlie.takeDamage(20);
+	charlie.takeDamage(20);
 }
