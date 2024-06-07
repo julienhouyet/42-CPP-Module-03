@@ -6,18 +6,18 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:40:40 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 16:46:29 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 16:57:42 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap( void ) : _name("JohnDoe"), _hitPoints(100), _energyPoints(2), _attackDamage(20)
+ClapTrap::ClapTrap( void ) : _name("JohnDoe"), _hitPoints(100), _energyPoints(10), _attackDamage(20)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap( std::string name ) : _name(name), _hitPoints(100), _energyPoints(2), _attackDamage(20)
+ClapTrap::ClapTrap( std::string name ) : _name(name), _hitPoints(100), _energyPoints(10), _attackDamage(20)
 {
 	std::cout << "Constructor called" << std::endl;
 }
@@ -50,7 +50,7 @@ void ClapTrap::attack( const std::string& target )
 	if (this->_hitPoints > 0 && this->_energyPoints > 0)
 	{
 		this->_energyPoints--;
-		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;	
+		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 	}
 	else
 	{
@@ -70,7 +70,7 @@ void ClapTrap::takeDamage( unsigned int amount )
 {
 	if (this->_hitPoints > 0)
 	{
-		this->_hitPoints = this->_hitPoints - amount;
+		this->_hitPoints -= amount;
 		std::cout << this->_name << " take " << amount << " points of damage, " << this->_hitPoints << " hit points remaining." << std::endl;
 	}
 	else
@@ -81,5 +81,14 @@ void ClapTrap::takeDamage( unsigned int amount )
 
 void ClapTrap::beRepaired( unsigned int amount )
 {
-	std::cout << "repair " << amount << " hitpoint " << std::endl;
+	if (this->_energyPoints > 0)
+	{
+		this->_energyPoints--;
+		this->_hitPoints += amount;
+		std::cout << this->_name << " heals himself and recovers " << amount << " hits points." << std::endl;
+	}
+	else
+	{
+		std::cout << this->_name << " can't heal himself, he has no more energy points." << std::endl;
+	}
 }
