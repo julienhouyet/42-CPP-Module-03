@@ -20,32 +20,32 @@ int main()
 
 	std::cout << std::endl;
 
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
 
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
 
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
 
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
 
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
 	
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
@@ -54,27 +54,27 @@ int main()
 
 	std::cout << std::endl;
 	
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
 	
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
 	
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
 	
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
 	
-	lucas.attack("Charlie");
+	lucas.attack(charlie.getName());
 	charlie.takeDamage(lucas.getAttackDamage());
 
 	std::cout << std::endl;
