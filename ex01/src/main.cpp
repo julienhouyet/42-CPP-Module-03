@@ -6,17 +6,17 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:40:46 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 17:00:46 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 17:36:36 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 
 int main()
 {
-	ClapTrap lucas("Lucas");
-	ClapTrap charlie("Charlie");
+	ScavTrap lucas("Lucas");
+	ScavTrap charlie("Charlie");
 
 	std::cout << std::endl;
 

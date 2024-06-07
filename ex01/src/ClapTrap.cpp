@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:40:40 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 17:13:50 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 17:59:25 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,46 @@ ClapTrap& ClapTrap::operator=( const ClapTrap& copy )
 ClapTrap::~ClapTrap( void )
 {
 	std::cout << "Destructor called" << std::endl;
+}
+
+void ClapTrap::setName(std::string name)
+{
+	this->_name = name;
+}
+
+void ClapTrap::setHitPoints(unsigned int hitPoints)
+{
+	this->_hitPoints = hitPoints;
+}
+
+void ClapTrap::setEnergyPoints(int energyPoints)
+{
+	this->_energyPoints = energyPoints;
+}
+
+void ClapTrap::setAttackDamage(int attackDamage)
+{
+	this->_attackDamage = attackDamage;
+}
+
+std::string ClapTrap::getName() const
+{
+	return this->_name;
+}
+
+unsigned int ClapTrap::getHitPoints() const
+{
+	return this->_hitPoints;
+}
+
+int ClapTrap::getEnergyPoints() const
+{
+	return this->_energyPoints;
+}
+
+int ClapTrap::getAttackDamage() const
+{
+	return this->_attackDamage;
 }
 
 void ClapTrap::attack( const std::string& target )
