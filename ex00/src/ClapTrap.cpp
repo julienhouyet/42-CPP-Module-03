@@ -6,18 +6,18 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:40:40 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 16:57:42 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 17:13:50 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap( void ) : _name("JohnDoe"), _hitPoints(100), _energyPoints(10), _attackDamage(20)
+ClapTrap::ClapTrap( void ) : _name("JohnDoe"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap( std::string name ) : _name(name), _hitPoints(100), _energyPoints(10), _attackDamage(20)
+ClapTrap::ClapTrap( std::string name ) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "Constructor called" << std::endl;
 }
@@ -70,7 +70,14 @@ void ClapTrap::takeDamage( unsigned int amount )
 {
 	if (this->_hitPoints > 0)
 	{
-		this->_hitPoints -= amount;
+		if (amount > this->_hitPoints)
+		{
+			this->_hitPoints = 0;
+		}
+		else
+		{
+			this->_hitPoints -=amount;
+		}
 		std::cout << this->_name << " take " << amount << " points of damage, " << this->_hitPoints << " hit points remaining." << std::endl;
 	}
 	else
