@@ -1,0 +1,7 @@
+**/*.DS_Store
+.vscode
+*.o
+
+ex00/
+ex01/
+ex02/
