@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:40:46 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/07 17:00:46 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/07 18:16:40 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ int main()
 	std::cout << std::endl;
 	
 	lucas.attack("Charlie");
+	charlie.takeDamage(20);
 
 	std::cout << std::endl;
 }
